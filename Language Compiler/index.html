@@ -1,0 +1,42 @@
+<html>
+    <head>
+    <title>Language compiler</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.3/ace.js" type"text/javascript" charset="utf-8">
+    </script>
+
+  <script src="script.js"></script>
+
+    <style>
+        #editor
+        {
+            height:50%;
+            width:50%;
+            margin-top:5px;
+        }
+        </style>
+
+    </head>
+    <body>
+        <!--buttons-->
+        <select id="selector">
+            
+            <option>Java</option>
+            <option>C</option>
+             <option>Javascript</option>
+            <option>C++</option>
+            <option>Python</option>
+        </select>
+    
+    <div id="editor"></div>
+      <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    </script>
+
+    <!-- black area for output-->
+        <div id="area" style="background-color:black;  height:200px; width:50%;">
+            <h3 id="output" style="color:white;">Output</h3>
+        </div>
+         <button  id="btn"style="margin-top:9px; background-color:yellow; border-radius:4px;" onclick=btn_click()>Compile</button>
+    </body>
+</html>
